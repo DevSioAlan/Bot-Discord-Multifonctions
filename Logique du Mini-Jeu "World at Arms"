@@ -1,0 +1,21 @@
+# --- EXTRAIT : Algorithme de Combat du Mini-Jeu ---
+@bot.tree.command(name="attack", description="💣 Attaquer un joueur pour piller.")
+async def attack(interaction: discord.Interaction, cible: discord.Member):
+    # ... (Vérifications de base omises pour la clarté) ...
+    
+    # Récupération des statistiques depuis la BDD
+    s1, t1, a1, w1 = get_army(interaction.user.id)
+    s2, t2, a2, w2 = get_army(cible.id)
+    
+    # Calcul de la puissance avec un facteur RNG (hasard +/- 20%) pour le dynamisme
+    force_atk = int(((s1*1) + (t1*20) + (a1*120)) * random.uniform(0.8, 1.2))
+    force_def = int(((s2*1) + (t2*20) + (a2*120)) * random.uniform(0.8, 1.2))
+    
+    if force_atk > force_def:
+        # Système de pillage : Vol de 10% du solde avec un minimum garanti
+        loot = max(100, int(get_balance(cible.id) * 0.1)) 
+        
+        update_balance(cible.id, -loot)
+        update_balance(interaction.user.id, loot)
+        update_army(interaction.user.id, w=1)
+        # ... (Génération de l'embed de victoire) ...
