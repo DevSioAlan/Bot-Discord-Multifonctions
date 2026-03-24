@@ -1,6 +1,6 @@
 # 🛠️ Bot Discord Multi-Fonctions - Modération, Économie & Vocaux Dynamiques
 
-> **Note :** Ce dépôt met en avant la logique de création d'un bot Discord polyvalent. Il illustre la maîtrise de l'interface utilisateur moderne de Discord (UI Views, Modals), la gestion d'une base de données relationnelle locale (SQLite3) et l'implémentation de commandes d'administration avancées.
+> **Note :** Ce dépôt met en avant la logique de création d'un bot Discord polyvalent développé par Alan. Il illustre la maîtrise de l'interface utilisateur moderne de Discord (UI Views, Modals), la gestion d'une base de données relationnelle locale (SQLite3) et l'implémentation de commandes d'administration avancées.
 
 ## 🚀 À propos du projet
 Ce bot a été pensé comme le couteau suisse ultime pour un serveur Discord. Plutôt que de se limiter à des commandes textuelles, il exploite pleinement les nouveautés de l'API Discord en offrant des panneaux de contrôle interactifs sous forme de boutons et menus déroulants. Il inclut également un mini-jeu de stratégie intégrant une économie virtuelle avec sa propre logique mathématique.
